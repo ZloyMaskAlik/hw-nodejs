@@ -1,0 +1,35 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "pino-http": "^10.4.0"
+  },
+  "name": "nodejs-hw-mongodb",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "devDependencies": {
+    "@eslint/js": "^9.26.0",
+    "eslint": "^9.26.0",
+    "globals": "^16.1.0",
+    "nodemon": "^3.1.10",
+    "pino-pretty": "^13.0.0",
+    "prettier": "3.5.3"
+  },
+  "scripts": {
+    "lint": "eslint src/**/*.js",
+    "start": "node ./src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZloyMaskAlik/nodejs-hw-mongodb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZloyMaskAlik/nodejs-hw-mongodb/issues"
+  },
+  "homepage": "https://github.com/ZloyMaskAlik/nodejs-hw-mongodb#readme",
+  "description": ""
+}
