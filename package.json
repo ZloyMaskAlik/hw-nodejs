@@ -10,6 +10,7 @@
   "name": "nodejs-hw-mongodb",
   "version": "1.0.0",
   "main": "src/index.js",
+  "type": "module",
   "devDependencies": {
     "@eslint/js": "^9.26.0",
     "eslint": "^9.26.0",
@@ -19,9 +20,8 @@
     "prettier": "3.5.3"
   },
   "scripts": {
-    "lint": "eslint src/**/*.js",
-    "start": "node ./src/server.js",
-    "dev": "nodemon src/server.js"
+    "start": "node src/index",
+    "dev": "nodemon src/index"
   },
   "repository": {
     "type": "git",
