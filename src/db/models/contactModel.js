@@ -5,8 +5,7 @@ const contactSchema = new Schema(
     name: {
       type: String,
       required: true,
-        },
-      
+    },
     phoneNumber: {
       type: String,
       required: true,
@@ -26,8 +25,9 @@ const contactSchema = new Schema(
     },
   },
   {
+    versionKey: false,
     timestamps: true,
   },
 );
 
-export const ContactsCollection = model('Contact', contactSchema); //contacts//
+export const ContactsCollection = model('contact', contactSchema);
