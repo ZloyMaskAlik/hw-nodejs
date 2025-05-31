@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
@@ -10,7 +12,7 @@
     "pino-http": "^10.4.0",
     "router": "^2.2.0"
   },
-  "name": "nodejs-hw-mongodb",
+  "name": "hw-nodejs",
   "version": "1.0.0",
   "main": "src/index.js",
   "type": "module",
@@ -28,14 +30,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ZloyMaskAlik/nodejs-hw-mongodb.git"
+    "url": "git+https://github.com/ZloyMaskAlik/hw-nodejs.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ZloyMaskAlik/nodejs-hw-mongodb/issues"
+    "url": "https://github.com/ZloyMaskAlik/hw-nodejs/issues"
   },
-  "homepage": "https://github.com/ZloyMaskAlik/nodejs-hw-mongodb#readme",
+  "homepage": "https://github.com/ZloyMaskAlik/hw-nodejs#readme",
   "description": ""
 }

@@ -1,5 +1,4 @@
 import { Router } from 'express';
-
 import {
   createContactController,
   deleteContactController,
@@ -15,8 +14,12 @@ import {
   createContactsSchema,
   updateContactsSchema
 } from '../validation/contacts.js';
+
+import { authenticate } from '../middlewares/authenticate.js';
  
 const contactsRouter = Router();
+
+contactsRouter.use(authenticate);
 
 contactsRouter.get('/contacts', ctrlWrapper(getContactsController));
 
