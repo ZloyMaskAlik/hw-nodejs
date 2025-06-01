@@ -28,8 +28,8 @@ export const getContactsController = async (req, res) => {
 };
 
 export const getContactsByIdController = async (req, res) => {
+  const { id: _id } = req.params;
   const { _id: userId } = req.user;
-  const { id, _id } = req.params;
 
   const data = await contactServices.getContact({ _id, userId });
 
@@ -39,7 +39,7 @@ export const getContactsByIdController = async (req, res) => {
 
   res.json({
     status: 200,
-    message: `Successfully found contact with id ${id}!`,
+    message: `Successfully found contact with id ${_id}!`,
     data,
   });
 };
