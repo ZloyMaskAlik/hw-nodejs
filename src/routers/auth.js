@@ -3,12 +3,14 @@ import { ctrlWrapper } from '../utils/ctrlWrapper.js';
 import {
   authRegisterSchema,
   authLoginSchema,
+  resetPasswordSchema,
 } from '../validation/authRegisterSchems.js';
 import {
   registerController,
   loginController,
   refreshController,
   logoutController,
+  resetPasswordController,
 } from '../controllers/auth.js';
 import { validateBody } from '../middlewares/validateBody.js';
 
@@ -26,11 +28,14 @@ authRouter.post(
   ctrlWrapper(loginController),
 );
 
-authRouter.post(
-  '/refresh',
-   ctrlWrapper(refreshController),
-);
+authRouter.post('/refresh', ctrlWrapper(refreshController));
 
 authRouter.post('/logout', ctrlWrapper(logoutController));
+
+authRouter.post(
+  `/reset-pwd`,
+  validateBody(resetPasswordSchema),
+  ctrlWrapper(resetPasswordController),
+);
 
 export default authRouter;
