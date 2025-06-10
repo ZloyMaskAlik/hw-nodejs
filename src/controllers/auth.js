@@ -87,3 +87,7 @@ export const resetPasswordController = async (req, res) => {
     data: {},
   });
 };
+
+export const getOauthController = async (req, res) => {
+  res.end();
+};

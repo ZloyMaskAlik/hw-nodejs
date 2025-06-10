@@ -13,9 +13,9 @@ import {
   logoutController,
   requestResetEmailController,
   resetPasswordController,
+  getOauthController,
 } from '../controllers/auth.js';
 import { validateBody } from '../middlewares/validateBody.js';
-
 
 const authRouter = Router();
 
@@ -46,4 +46,6 @@ authRouter.post(
   validateBody(resetPasswordSchema),
   ctrlWrapper(resetPasswordController),
 );
+
+authRouter.get('/get-oauth-url', ctrlWrapper(getOauthController));
 export default authRouter;
