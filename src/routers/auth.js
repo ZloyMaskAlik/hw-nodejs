@@ -16,7 +16,6 @@ import {
 } from '../controllers/auth.js';
 import { validateBody } from '../middlewares/validateBody.js';
 
-import { upload } from '../middlewares/upload.js';
 
 const authRouter = Router();
 
@@ -43,7 +42,6 @@ authRouter.post(
 );
 
 authRouter.post(
-  upload.single('avatar'),
   '/reset-password',
   validateBody(resetPasswordSchema),
   ctrlWrapper(resetPasswordController),
