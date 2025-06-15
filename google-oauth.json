@@ -1,0 +1,13 @@
+{
+    "web": {
+        "client_id": "81894553712-8sornfcs0r2egj33oobad35gnnjqjmfi.apps.googleusercontent.com",
+        "project_id": "node-goit-462520",
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        "client_secret": "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",
+        "redirect_uris": [
+            "http://localhost:3000/goole-oauh"
+        ]
+    }
+}
