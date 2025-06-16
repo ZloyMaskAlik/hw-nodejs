@@ -13,9 +13,15 @@ import {
   logoutController,
   requestResetEmailController,
   resetPasswordController,
-  getOauthController,
+  loginWithGoogleController,
 } from '../controllers/auth.js';
+
 import { validateBody } from '../middlewares/validateBody.js';
+
+import { getGoogleOAuthUrlController } from '../controllers/auth.js';
+
+import { loginWithGoogleOAuthSchema } from '../validation/authRegisterSchems.js';
+
 
 const authRouter = Router();
 
@@ -47,5 +53,11 @@ authRouter.post(
   ctrlWrapper(resetPasswordController),
 );
 
-authRouter.get('/get-oauth-url', ctrlWrapper(getOauthController));
+authRouter.get('/get-oauth-url', ctrlWrapper(getGoogleOAuthUrlController));
+
+authRouter.post(
+  '/confirm-oauth',
+  validateBody(loginWithGoogleOAuthSchema),
+  ctrlWrapper(loginWithGoogleController),
+);
 export default authRouter;
