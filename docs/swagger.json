@@ -11,6 +11,9 @@
   },
   "servers": [
     {
+      "url": "https://hw7-swagger-hs4m.onrender.com"
+    },
+    {
       "url": "http://localhost:3000"
     }
   ],
