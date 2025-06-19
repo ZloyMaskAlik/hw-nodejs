@@ -10,7 +10,8 @@ tags:
   - name: Contacts
     description: Operations about contacts.
 servers:
-    - url: https://hw7-swagger-hs4m.onrender.com
+  - url: http://localhost:3000
+  - url: https://hw7-swagger-hs4m.onrender.com
 paths:
   /contacts:
     get:
